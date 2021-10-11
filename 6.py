@@ -1,5 +1,5 @@
 a=float(input())
-if a % 2 == 0:
-	print('целое')
+if a == int(a):
+    print('целое')
 else:
-	print('не целое')
+    print('не целое')

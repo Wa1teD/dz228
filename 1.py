@@ -1,8 +1,8 @@
 a=float(input())
 b=float(input())
 if a > b:
-	print(a)
+    print(a)
 elif b > a:
-	print(b)
+    print(b)
 elif a == b:
-	print('Числа равны')
+    print('Числа равны')
