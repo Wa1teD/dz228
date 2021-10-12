@@ -4,5 +4,5 @@ if a > b:
     print(a)
 elif b > a:
     print(b)
-elif a == b:
+else:
     print('Числа равны')

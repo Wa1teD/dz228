@@ -1,4 +1,5 @@
 from math import *
+
 x = float(input('X = '))
 y = float(input('Y = '))
 z = float(input('Z = '))
