@@ -1,5 +1,11 @@
 from math import trunc
 
+count = int(input())
+a = []
+for i in range(count):
+    a.append(int(input()))
+key = int(input())
+
 def list_n(j):
     q = list()
     i = 0
@@ -9,21 +15,9 @@ def list_n(j):
     return q
 
 def bin_search(lst, key):
-    left = 0 
-    right = len(lst)
-    while left != None:
-        if key > right or key < 0:
-            return None
-        else: 
-            middle = trunc((left + right) / 2)
-            if lst[middle] > key: 
-                right = middle - 1
-            elif lst[middle] < key:
-                left = middle + 1
-            elif lst[middle] == key:
-                return "Ваш индекс :" + str(middle)
-
-
+    for i in range(len(lst)):
+        if lst[i] == key:
+            return "Ваш индекс :" + str(i)
 def tests():
     print(bin_search([1, 2, 3, 4, 5], 5))#4
     print(bin_search([69], 1))#None
@@ -31,6 +25,7 @@ def tests():
     print(bin_search([0, 1, 2], 0))#0
     print(bin_search([1], -2))#None
     print(bin_search([1, 2, 3, 4, 3], 3))#2
+    print(bin_search(a, key))
 tests()
 def binar():
     assert bin_search([1, 2, 3, 4, 5], 5) == 4
@@ -39,6 +34,7 @@ def binar():
     assert bin_search([0, 1, 2], 0) == 0
     assert bin_search([1], -2) is None
     assert bin_search([1, 2, 3, 4, 3], 3) == 2
+    assert bin_search(a, key) == 0
 
 
                         
