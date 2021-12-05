@@ -1,4 +1,4 @@
-from math  import trunc
+from math import trunc
 
 def list_n(j):
     q = list()
@@ -21,16 +21,24 @@ def bin_search(lst, key):
             elif lst[middle] < key:
                 left = middle + 1
             elif lst[middle] == key:
-                return "Ваш индекс : " + str(middle)
-def tests():
-    print(bin_search([1,2,3,4,5],5))#4
-    print(bin_search([69],1))#None
-    print(bin_search([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],4))#3
-    print(bin_search([0,1,2],0))#0
-    print(bin_search([1],-2))#None
-    print(bin_search([1,2,3,4,3],3))#2
-tests()
+                return "Ваш индекс :" + str(middle)
 
-            
+
+def tests():
+    print(bin_search([1, 2, 3, 4, 5], 5))#4
+    print(bin_search([69], 1))#None
+    print(bin_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 4))#3
+    print(bin_search([0, 1, 2], 0))#0
+    print(bin_search([1], -2))#None
+    print(bin_search([1, 2, 3, 4, 3], 3))#2
+tests()
+def binar():
+    assert bin_search([1, 2, 3, 4, 5], 5) == 4
+    assert bin_search([69], 1) is None
+    assert bin_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 4) == 3
+    assert bin_search([0, 1, 2], 0) == 0
+    assert bin_search([1], -2) is None
+    assert bin_search([1, 2, 3, 4, 3], 3) == 2
+
 
                         
